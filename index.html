@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somnus AI 睡眠助手</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <p class="eyebrow">Hack the Rest</p>
+        <h1>Somnus AI</h1>
+        <p class="sidebar-copy">
+          以 AI 为核心、以床品为接口的夜间睡眠系统。帮助年轻职场人更容易睡着，也在更合适的时间醒来。
+        </p>
+      </div>
+
+      <div class="progress-panel">
+        <p class="progress-label">体验闭环</p>
+        <ol id="progress-steps" class="progress-steps"></ol>
+      </div>
+
+      <div class="source-card">
+        <p class="card-label">床品接口</p>
+        <p class="card-title">Bluebox Pillow Dock</p>
+        <p class="card-copy">模拟采集心率、HRV、呼吸、体动、环境噪音与光线，作为 AI 睡眠助手的数据入口。</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Web Demo</p>
+          <h2 id="screen-title">今晚睡眠</h2>
+        </div>
+        <button id="reset-button" class="ghost-button" type="button">重新演示</button>
+      </header>
+
+      <section class="content-grid">
+        <div class="hero-card">
+          <div class="hero-card__header">
+            <div>
+              <p class="card-label">当前阶段</p>
+              <h3 id="screen-heading">今晚睡眠</h3>
+            </div>
+            <span id="stage-badge" class="stage-badge">准备开始</span>
+          </div>
+          <p id="screen-description" class="hero-description"></p>
+          <div id="screen-body" class="screen-body"></div>
+          <div class="hero-actions">
+            <button id="primary-action" class="primary-button" type="button"></button>
+          </div>
+        </div>
+
+        <div class="metrics-card">
+          <div class="metrics-card__header">
+            <div>
+              <p class="card-label">模拟传感数据</p>
+              <h3>实时状态</h3>
+            </div>
+            <span class="sensor-pill"><i></i>Pillow + Mattress · Live</span>
+          </div>
+          <div id="metrics-grid" class="metrics-grid"></div>
+          <div class="chart-card">
+            <div class="chart-card__header">
+              <p class="card-label">最近 20 分钟模拟数据流</p>
+              <p id="timeline-label" class="timeline-label">待开始</p>
+            </div>
+            <div id="timeline-bars" class="timeline-bars"></div>
+          </div>
+          <div class="insight-card">
+            <p class="card-label">AI 解释</p>
+            <p id="insight-text" class="insight-text"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
